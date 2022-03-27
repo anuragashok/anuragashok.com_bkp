@@ -42,31 +42,39 @@ export default function Page() {
           <ul className="steps steps-vertical">
             <li data-content="▼" className="step step-accent">
               <div>
-                <div className="badge badge-outline p-2 text-base-100">2021 ▶︎ Now</div>
                 <div className="badge badge-lg m-2 bg-accent p-4 text-base-content">Grab</div>
+                <div className="badge badge-outline badge-sm mr-1 p-2 p-1 text-sm text-base-100">
+                  2021 ▶︎ Now
+                </div>
               </div>
             </li>
             <li data-content="▼" className="step step-accent">
               <div>
-                <div className="badge badge-outline p-2 text-base-100">2021 ▶︎ Now</div>
                 <div className="badge badge-lg m-2 bg-accent p-4 text-base-content">
                   Singapore Airlines
                 </div>
-              </div>
-            </li>
-            <li data-content="▼" className="step step-accent">
-              <div>
-                <div className="badge badge-outline p-2 text-base-100">2021 ▶︎ Now</div>
-                <div className="badge badge-lg m-2 bg-accent p-4 text-base-content">
-                  BNP Paribas ISPL
+                <div className="badge badge-outline badge-sm mr-1 p-2 p-1 text-sm text-base-100">
+                  2021 ▶︎ Now
                 </div>
               </div>
             </li>
             <li data-content="▼" className="step step-accent">
               <div>
-                <div className="badge badge-outline p-2 text-base-100">2021 ▶︎ Now</div>
+                <div className="badge badge-lg m-2 bg-accent p-4 text-base-content">
+                  BNP Paribas ISPL
+                </div>
+                <div className="badge badge-outline badge-sm mr-1 p-2 p-1 text-sm text-base-100">
+                  2021 ▶︎ Now
+                </div>
+              </div>
+            </li>
+            <li data-content="▼" className="step step-accent">
+              <div>
                 <div className="badge badge-lg m-2 bg-accent p-4 text-base-content">
                   Tata Consultancy Services
+                </div>
+                <div className="badge badge-outline badge-sm mr-1 p-2 p-1 text-sm text-base-100">
+                  2021 ▶︎ Now
                 </div>
               </div>
             </li>
