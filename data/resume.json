@@ -1,35 +1,75 @@
 {
-    "basics": {
-      "name": "Anurag Ashok",
-      "label": "Senior Software Engineer @ Grab",
-      "image": "",
-      "email": "anurag16890@gmail.com",
-      "phone": "+65 82877259",
-      "url": "https://anuragashok.com",
-      "summary": "9+ years of expertise in delivering business value through code.\nA seasoned professional with a background in the entire software development process, looking to automate and simplify the processes. \nQuickly learns new technologies while working in teams as well as self-directed settings.",
-      "location": {
-        "city": "Singapore",
-        "countryCode": "SG"
+  "basics": {
+    "name": "Anurag Ashok",
+    "label": "Senior Software Engineer @ Grab",
+    "image": "",
+    "email": "anurag16890@gmail.com",
+    "phone": "+65 82877259",
+    "url": "https://anuragashok.com",
+    "summary": "9+ years of expertise in delivering business value through code.\nA seasoned professional with a background in the entire software development process, looking to automate and simplify the processes. \nQuickly learns new technologies while working in teams as well as self-directed settings.",
+    "location": {
+      "city": "Singapore",
+      "countryCode": "SG"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "anuragashok",
+        "url": "https://github.com/anuragashok"
       },
-      "profiles": [{
+      {
         "network": "LinkedIn",
         "username": "anurag-ashok",
         "url": "https://www.linkedin.com/in/anurag-ashok/"
-      }]
-    },
-    "work": [{
-      "name": "Company",
+      },
+      {
+        "network": "Website",
+        "username": "anuragashok.com",
+        "url": "https://anuragashok.com"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Grab",
       "position": "President",
       "url": "https://company.com",
-      "startDate": "2013-01-01",
+      "startDate": "2021",
       "endDate": "",
       "summary": "Description…",
-      "highlights": [
-        "Started the company"
-      ]
-    }],
-    "volunteer": [],
-    "education": [{
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "Singapore Airlines",
+      "position": "President",
+      "url": "https://company.com",
+      "startDate": "2018",
+      "endDate": "",
+      "summary": "Description…",
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "BNP Paribas ISPL",
+      "position": "President",
+      "url": "https://company.com",
+      "startDate": "2016",
+      "endDate": "",
+      "summary": "Description…",
+      "highlights": ["Started the company"]
+    },
+    {
+      "name": "Tata Consultancy Services",
+      "position": "President",
+      "url": "https://company.com",
+      "startDate": "2013",
+      "endDate": "",
+      "summary": "Description…",
+      "highlights": ["Started the company"]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
       "institution": "University",
       "url": "https://institution.com/",
       "area": "Software Development",
@@ -37,63 +77,76 @@
       "startDate": "2011-01-01",
       "endDate": "2013-01-01",
       "score": "4.0",
-      "courses": [
-        "DB1101 - Basic SQL"
-      ]
-    }],
-    "awards": [{
+      "courses": ["DB1101 - Basic SQL"]
+    }
+  ],
+  "awards": [
+    {
       "title": "Award",
       "date": "2014-11-01",
       "awarder": "Company",
       "summary": "There is no spoon."
-    }],
-    "certificates": [{
+    }
+  ],
+  "certificates": [
+    {
       "name": "Certificate",
       "date": "2021-11-07",
       "issuer": "Company",
-      "url": "https://certificate.com",
-    }],
-    "publications": [{
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
       "name": "Publication",
       "publisher": "Company",
       "releaseDate": "2014-10-01",
       "url": "https://publication.com",
       "summary": "Description…"
-    }],
-    "skills": [{
+    }
+  ],
+  "skills": [
+    {
+      "name": "Backend & API Development",
+      "level": "Master",
+      "keywords": ["Golang", "Java", "Spring Boot", "Node.js"]
+    },
+    {
       "name": "Web Development",
       "level": "Master",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "JavaScript"
-      ]
-    }],
-    "languages": [{
+      "keywords": ["Javascript", "Next.js", "React"]
+    },
+    {
+      "name": "Platforms & Tools",
+      "level": "Master",
+      "keywords": ["Kubernetes", "Docker", "Terraform", "Splunk", "Jenkins", "AWS"]
+    }
+  ],
+  "languages": [
+    {
       "language": "English",
       "fluency": "Native speaker"
-    }],
-    "interests": [],
-    "references": [{
+    }
+  ],
+  "interests": [],
+  "references": [
+    {
       "name": "Jane Doe",
       "reference": "Reference…"
-    }],
-    "projects": [{
-      "name": "Project",
-      "description": "Description…",
-      "highlights": [
-        "Won award at AIHacks 2016"
-      ],
-      "keywords": [
-        "HTML"
-      ],
+    }
+  ],
+  "projects": [
+    {
+      "name": "faster.codes",
+      "description": "faster.codes is a developer tool to test the runtime performance of code blocks.\nThe platform executes iterations of the code blocks in isolated containers. It profiles the execution and compiles a comparative report on performance statistics.",
+      "highlights": ["Won award at AIHacks 2016"],
+      "keywords": ["Golang", "NestJS", "Next.js", "Cloudflare Workers", "Kubernetes"],
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
-      "url": "https://project.com/",
-      "roles": [
-        "Team Lead"
-      ],
-      "entity": "Entity",
+      "url": "https://github.com/anuragashok/faster.codes",
+      "roles": [""],
+      "entity": "https://faster.codes",
       "type": "application"
-    }]
-  }
+    }
+  ]
+}
