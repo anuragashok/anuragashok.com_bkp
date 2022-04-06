@@ -121,7 +121,7 @@ export default function Page() {
                 </a>
               </p>
               {data.projects[0].keywords.map((k) => (
-                <div key={k} className="badge-white badge badge-accent mr-2 mt-2 p-3">
+                <div key={'d' + k} className="badge-white badge badge-accent mr-1 mt-1 p-3">
                   {k}
                 </div>
               ))}
@@ -129,7 +129,7 @@ export default function Page() {
           </HomeResumeCard>
         </div>
         <div className="divider mb-0"></div>
-        <footer className="footer footer-center items-center p-6">
+        <footer className="footer footer-center items-center gap-1 p-4">
           <div className="mx-auto grid-flow-col gap-4 text-5xl">
             {data.basics.profiles.map((k) => (
               <a key={k.network} href={k.url} className="link block">

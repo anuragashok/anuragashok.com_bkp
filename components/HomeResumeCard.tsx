@@ -19,7 +19,7 @@ const HomeResumeCard: React.FC<Props> = ({ children, title, background }) => {
         <div className="card-actions absolute bottom-0 right-0 justify-end">
           <Link href={`/cv#${title}`} passHref={true}>
             <a>
-              <kbd className="kbd cursor-pointer bg-transparent text-2xl">
+              <kbd className="kbd cursor-pointer border-none bg-transparent text-2xl">
                 <FaArrowCircleRight />
               </kbd>
             </a>
