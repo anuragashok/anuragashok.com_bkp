@@ -9,9 +9,9 @@ interface Props {
 
 const HomeResumeCard: React.FC<Props> = ({ children, title, background }) => {
   return (
-    <div className="card-compact card image-full h-96 shadow-xl">
+    <div className="card image-full card-compact h-96 shadow-xl">
       <figure>
-        <Image src={'/home_img/' + background} layout="fill" quality={50} />
+        <Image src={'/home_img/' + background} layout="fill" quality={50} alt="" />
       </figure>
       <div className="card-body">
         <h2 className="card-title text-2xl text-primary">{title}</h2>

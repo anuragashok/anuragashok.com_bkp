@@ -1,8 +1,8 @@
 import HomeResumeCard from '@/components/HomeResumeCard'
 import data from '@/data/resume.json'
 import Head from 'next/head'
-import { ReactElement } from 'react'
-import Layout from '../components/Layout'
+import Image from 'next/image'
+
 import {
   FaGithub,
   FaLinkedin,
@@ -23,12 +23,12 @@ export default function Page() {
           <div className="hero-content flex-col lg:flex-row">
             <div className="avatar">
               <div className="w-48 rounded-full ring ring-primary ring-offset-2 ring-offset-base-100">
-                <img src="/home_img/anurag.jpg" />
+                <Image layout="fill" alt="Anurag Ashok" src="/home_img/anurag.jpg" />
               </div>
             </div>
             <div className="pl-5 ">
               <h2 className="text-4xl font-bold text-secondary">Hello World!</h2>
-              <h1 className="text-5xl font-bold text-primary">I'm Anurag Ashok</h1>
+              <h1 className="text-5xl font-bold text-primary">I&apos;m Anurag Ashok</h1>
               <h3 className="text-green text-3xl">
                 An engineer driving Southeast Asia forward @ Grab
               </h3>
@@ -56,7 +56,7 @@ export default function Page() {
               </p>
               <p className="text-xl">
                 {data.basics.profiles.map((k) => (
-                  <a href={k.url} className="link block">
+                  <a key={k.network} href={k.url} className="link block">
                     <div className="inline-flex items-center text-white  hover:underline">
                       {k.network.toLowerCase() == 'website' && <FaGlobe className="mr-2" />}
                       {k.network.toLowerCase() == 'linkedin' && <FaLinkedin className="mr-2" />}
@@ -70,12 +70,12 @@ export default function Page() {
           </HomeResumeCard>
           <HomeResumeCard title="Skills" background="Skills.jpg">
             {data.skills.map((s) => (
-              <div className="mb-2">
+              <div key={s.name} className="mb-2">
                 <h4 className="text-base-100">{s.name}</h4>
                 {s.keywords.map((k) => (
-                  <>
-                    <div className="badge badge-md mr-2 mt-2 bg-accent p-4">{k}</div>
-                  </>
+                  <div key={k} className="badge badge-md mr-2 mt-2 bg-accent p-4">
+                    {k}
+                  </div>
                 ))}
               </div>
             ))}
@@ -83,7 +83,7 @@ export default function Page() {
           <HomeResumeCard title="Career" background="Career.jpg">
             <ul className="">
               {data.work.map((w) => (
-                <li data-content={w.startDate} className="step step-accent text-xs">
+                <li key={w.name} data-content={w.startDate} className="step step-accent text-xs">
                   <div>
                     <div className="badge badge-lg m-2 bg-accent p-4">{w.name}</div>
                   </div>
@@ -115,7 +115,9 @@ export default function Page() {
                 </a>
               </p>
               {data.projects[0].keywords.map((k) => (
-                <div className="badge-white badge badge-accent mr-2 mt-2 p-3">{k}</div>
+                <div key={k} className="badge-white badge badge-accent mr-2 mt-2 p-3">
+                  {k}
+                </div>
               ))}
             </div>
           </HomeResumeCard>
@@ -124,7 +126,7 @@ export default function Page() {
         <footer className="footer footer-center items-center p-6">
           <div className="mx-auto grid-flow-col gap-4 text-5xl">
             {data.basics.profiles.map((k) => (
-              <a href={k.url} className="link block">
+              <a key={k.network} href={k.url} className="link block">
                 {k.network.toLowerCase() == 'website' && <FaGlobe />}
                 {k.network.toLowerCase() == 'linkedin' && <FaLinkedin />}
                 {k.network.toLowerCase() == 'github' && <FaGithub />}
