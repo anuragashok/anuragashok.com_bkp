@@ -23,7 +23,13 @@ export default function Page() {
           <div className="hero-content flex-col lg:flex-row">
             <div className="avatar">
               <div className="w-48 rounded-full ring ring-primary ring-offset-2 ring-offset-base-100">
-                <Image layout="fill" alt="Anurag Ashok" src="/home_img/anurag.jpg" />
+                <Image
+                  layout="fixed"
+                  width="200%"
+                  height="200%"
+                  alt="Anurag Ashok"
+                  src="/home_img/anurag.jpg"
+                />
               </div>
             </div>
             <div className="pl-5 ">
