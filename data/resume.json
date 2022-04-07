@@ -128,7 +128,7 @@
       "fluency": "Native speaker"
     }
   ],
-  "interests": [],
+  "interests": ["everything-as-code","automation","devops","microservices","clean code", "problem solving"],
   "references": [
     {
       "name": "Jane Doe",
@@ -139,13 +139,25 @@
     {
       "name": "faster.codes",
       "description": "faster.codes is a developer tool to test the runtime performance of code blocks.\nThe platform executes iterations of the code blocks in isolated containers. It profiles the execution and compiles a comparative report on performance statistics.",
-      "highlights": ["Won award at AIHacks 2016"],
+      "highlights": ["Cloudflare Summer Developer Challenge (top 300)"],
       "keywords": ["Golang", "NestJS", "Next.js", "Cloudflare Workers", "Kubernetes"],
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
       "url": "https://github.com/anuragashok/faster.codes",
       "roles": [""],
       "entity": "https://faster.codes",
+      "type": "application"
+    },
+    {
+      "name": "wiremock-extension-record-delay",
+      "description": "Set of wiremock extensions to record response time as delay during recording / snapshotting.",
+      "highlights": [""],
+      "keywords": ["Java", "Wiremock"],
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "url": "https://github.com/anuragashok/wiremock-extension-record-delay",
+      "roles": [""],
+      "entity": "https://github.com/anuragashok/wiremock-extension-record-delay",
       "type": "application"
     }
   ]

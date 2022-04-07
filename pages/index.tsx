@@ -1,22 +1,24 @@
 import HomeResumeCard from '@/components/HomeResumeCard'
 import data from '@/data/resume.json'
+import site from '@/data/site.json'
 import Head from 'next/head'
 import Image from 'next/image'
+import PoweredByVercel from 'powered-by-vercel'
 
 import {
   FaGithub,
   FaLinkedin,
   FaGlobe,
   FaLocationArrow,
-  FaPowerOff,
   FaCopyright,
+  FaTrophy,
 } from 'react-icons/fa'
 
 export default function Page() {
   return (
     <>
       <Head>
-        <title>&#123; anurag.ashok &#125;</title>
+        <title>Anurag Ashok</title>
       </Head>
       <div className="container mx-auto pl-5 pr-5">
         <div className="hero ">
@@ -97,52 +99,98 @@ export default function Page() {
               ))}
             </ul>
           </HomeResumeCard>
-          <HomeResumeCard title="Education" background="Education.jpg">
+          <HomeResumeCard title="Education" background="Education.jpg" showMore={false}>
             <div className="stat-title text-lg">Mumbai University</div>
             <div className="stat-value whitespace-normal text-5xl">Bachelor of Engineering</div>
             <div className="stat-value whitespace-normal text-3xl">Information Technology</div>
             <div className="stat-desc pt-2 text-lg">2008-2012</div>
           </HomeResumeCard>
-
-          <HomeResumeCard title="Personal Project" background="PersonalProject.jpg">
+          <HomeResumeCard title="Hobby Project" background="PersonalProject.jpg" showMore={false}>
             <div className="prose-code prose prose-zinc mt-2 text-white  prose-h3:mt-1">
               <a href={data.projects[0].entity}>
-                <h3 className=" mt-1 mr-2 inline-block text-white hover:underline">
+                <h3 className=" mt-1 mr-2 mb-1 inline-block text-white hover:underline">
                   {data.projects[0].name}
                 </h3>
               </a>
+              <h4 className="mt-1 inline-flex items-center  text-primary">
+                <FaTrophy className="mr-2 align-middle" />
+                <span>{data.projects[0].highlights[0]}</span>
+              </h4>
               <p className="mt-2">{data.projects[0].description}</p>
-              <p className="mt-2">
+              <p className="mt-1 ">
                 <a href={data.projects[0].url} className="block text-xl text-white no-underline">
                   <div className="inline-flex items-center text-white  hover:underline">
                     <FaGithub className="mr-2" />
-                    <span>{data.projects[0].url.replace('https://', '').replace('www.', '')}</span>
+                    <span>
+                      {data.projects[0].url.replace('https://github.com/', '').replace('www.', '')}
+                    </span>
                   </div>
                 </a>
               </p>
-              {data.projects[0].keywords.map((k) => (
-                <div key={'d' + k} className="badge-white badge badge-accent mr-1 mt-1 p-3">
-                  {k}
-                </div>
-              ))}
+              <div>
+                {data.projects[0].keywords.map((k, i) => (
+                  <div key={i} className="badge-white badge badge-accent mr-1 mt-1 p-3">
+                    {k}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </HomeResumeCard>
+          <HomeResumeCard title="Hobby Project" background="PersonalProject.jpg" showMore={false}>
+            <div className="prose-code prose prose-zinc mt-2 text-white  prose-h3:mt-1">
+              <a href={data.projects[1].entity}>
+                <h3 className=" mt-1 mr-2 inline-block text-white hover:underline">
+                  {data.projects[1].name}
+                </h3>
+              </a>
+              <p className="mt-2">{data.projects[1].description}</p>
+              <p className="mt-2">
+                <a href={data.projects[1].url} className="block text-xl text-white no-underline">
+                  <div className="inline-flex items-center text-white  hover:underline">
+                    <FaGithub className="mr-2" />
+                    <span>
+                      {data.projects[1].url.replace('https://github.com/', '').replace('www.', '')}
+                    </span>
+                  </div>
+                </a>
+              </p>
+              <div>
+                {data.projects[1].keywords.map((k, i) => (
+                  <div key={i} className="badge-white badge badge-accent mr-1 mt-1 p-3">
+                    {k}
+                  </div>
+                ))}
+              </div>
             </div>
           </HomeResumeCard>
         </div>
-        <div className="divider mb-0"></div>
-        <footer className="footer footer-center items-center gap-1 p-4">
-          <div className="mx-auto grid-flow-col gap-4 text-5xl">
-            {data.basics.profiles.map((k) => (
-              <a key={k.network} href={k.url} className="link block">
-                {k.network.toLowerCase() == 'website' && <FaGlobe />}
-                {k.network.toLowerCase() == 'linkedin' && <FaLinkedin />}
-                {k.network.toLowerCase() == 'github' && <FaGithub />}
-              </a>
-            ))}
+        <footer className="footer mt-6 bg-neutral p-10 text-neutral-content">
+          <div>
+            <span className="footer-title">Links</span>
+            <a className="link link-hover">About</a>
+            <a className="link link-hover">Blog</a>
+            <a className="link link-hover">Contact</a>
+            <a className="link link-hover">Download Resume</a>
           </div>
           <div>
-            <span className="text-lg">
-              <FaCopyright className="inline" /> 2022 Anurag Ashok
-            </span>
+            <span className="footer-title">Social</span>
+            <div className="mb-4 grid grid-flow-col gap-4 text-5xl">
+              {data.basics.profiles.map((k) => (
+                <a key={k.network} href={k.url} className="link block">
+                  {k.network.toLowerCase() == 'website' && <FaGlobe />}
+                  {k.network.toLowerCase() == 'linkedin' && <FaLinkedin />}
+                  {k.network.toLowerCase() == 'github' && <FaGithub />}
+                </a>
+              ))}
+            </div>
+            <PoweredByVercel
+              utmSource={site.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              svgProps={{
+                width: 200,
+              }}
+            />
           </div>
         </footer>
       </div>
